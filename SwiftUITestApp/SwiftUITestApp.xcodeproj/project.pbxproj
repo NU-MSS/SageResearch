@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D841BD2AD0DC3700C14003 /* ResearchUI in Frameworks */ = {isa = PBXBuildFile; productRef = 24D841BC2AD0DC3700C14003 /* ResearchUI */; };
+		24D841BF2AD0DC3E00C14003 /* Research in Frameworks */ = {isa = PBXBuildFile; productRef = 24D841BE2AD0DC3E00C14003 /* Research */; };
 		FFA462712706389C00BF0FC5 /* SwiftUITestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA462702706389C00BF0FC5 /* SwiftUITestAppApp.swift */; };
 		FFA462732706389C00BF0FC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA462722706389C00BF0FC5 /* ContentView.swift */; };
 		FFA462752706389F00BF0FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA462742706389F00BF0FC5 /* Assets.xcassets */; };
 		FFA462782706389F00BF0FC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA462772706389F00BF0FC5 /* Preview Assets.xcassets */; };
 		FFA4628B27063A6C00BF0FC5 /* CustomTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4628A27063A6C00BF0FC5 /* CustomTask.swift */; };
 		FFEE26DE270D25A700E37DD5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEE26DD270D25A700E37DD5 /* Storyboard.storyboard */; };
-		FFFF9D8C27E161D6002C6BD5 /* Research in Frameworks */ = {isa = PBXBuildFile; productRef = FFFF9D8B27E161D6002C6BD5 /* Research */; };
-		FFFF9D8E27E161D6002C6BD5 /* ResearchUI in Frameworks */ = {isa = PBXBuildFile; productRef = FFFF9D8D27E161D6002C6BD5 /* ResearchUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFFF9D8C27E161D6002C6BD5 /* Research in Frameworks */,
-				FFFF9D8E27E161D6002C6BD5 /* ResearchUI in Frameworks */,
+				24D841BD2AD0DC3700C14003 /* ResearchUI in Frameworks */,
+				24D841BF2AD0DC3E00C14003 /* Research in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +102,8 @@
 			);
 			name = SwiftUITestApp;
 			packageProductDependencies = (
-				FFFF9D8B27E161D6002C6BD5 /* Research */,
-				FFFF9D8D27E161D6002C6BD5 /* ResearchUI */,
+				24D841BC2AD0DC3700C14003 /* ResearchUI */,
+				24D841BE2AD0DC3E00C14003 /* Research */,
 			);
 			productName = SwiftUITestApp;
 			productReference = FFA4626D2706389C00BF0FC5 /* SwiftUITestApp.app */;
@@ -371,13 +371,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FFFF9D8B27E161D6002C6BD5 /* Research */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Research;
-		};
-		FFFF9D8D27E161D6002C6BD5 /* ResearchUI */ = {
+		24D841BC2AD0DC3700C14003 /* ResearchUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ResearchUI;
+		};
+		24D841BE2AD0DC3E00C14003 /* Research */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Research;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
