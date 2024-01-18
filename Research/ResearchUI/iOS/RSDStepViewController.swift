@@ -84,6 +84,12 @@ open class RSDStepViewController : UIViewController, RSDStepController, RSDCance
             return result
         }
     }()
+
+    /// Property for supplying a callback that will be called during the view controller's `viewDidLoad()`.
+    ///
+    /// This is currently used by UI testing to inject custom view configuration required for testing.
+    /// - parameter viewController: A reference to the view controller whose view was loaded.
+    public var callback_onViewDidLoad: ((_ viewController: RSDStepViewController) -> Void)? = nil
     
     // MARK: Initialization
     
