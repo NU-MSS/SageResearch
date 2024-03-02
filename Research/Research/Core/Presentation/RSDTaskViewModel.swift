@@ -99,7 +99,9 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
 		commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
     }
 	
-	public override init(taskResult: RSDTaskResult){
+	public init(taskInfo: RSDTaskInfo, taskResult: RSDTaskResult){
+		self.identifier = taskInfo.identifier
+		self.taskInfo = taskInfo
 		super.init(taskResult: taskResult)
 	}
         
