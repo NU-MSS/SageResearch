@@ -95,9 +95,13 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
         self.identifier = taskInfo.identifier
         self.taskInfo = taskInfo
         let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
-        super.init(taskResult: taskResult)
-        commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
+		super.init(taskResult: taskResult)
+		commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
     }
+	
+	public override init(taskResult: RSDTaskResult){
+		super.init(taskResult: taskResult)
+	}
         
     public func commonInit(identifier: String, parentPath: RSDPathComponent?) {
         self.parent = parentPath
