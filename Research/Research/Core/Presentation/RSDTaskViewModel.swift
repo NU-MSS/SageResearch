@@ -34,7 +34,7 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     public private(set) var taskInfo: RSDTaskInfo?
     
     /// The task that is currently being run.
-    public private(set) var task: RSDTask?
+    public internal(set) var task: RSDTask?
     
     public var taskRunUUID : UUID? {
         (self.taskResult as? AssessmentResult)?.taskRunUUID ?? (self.parent as? RSDTaskViewModel)?.taskRunUUID
@@ -77,11 +77,15 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     public init(task: RSDTask, parentPath: RSDPathComponent? = nil) {
         self.identifier = task.identifier
         self.task = task
-        let taskResult = task.instantiateTaskResult()
+		let taskResult = task.instantiateTaskResult()
         super.init(taskResult: taskResult)
         commonInit(identifier: task.identifier, parentPath: parentPath)
         setupDataTracking()
     }
+	
+	internal func setIdentifier(identifier: String){
+		self.identifier = identifier
+	}
     
     /// Initialize the task path with a task.
     /// - parameters:
@@ -95,7 +99,7 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
         commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
     }
         
-    private func commonInit(identifier: String, parentPath: RSDPathComponent?) {
+    internal func commonInit(identifier: String, parentPath: RSDPathComponent?) {
         self.parent = parentPath
         guard let parent = parentPath else { return }
         self.dataManager = (parent as? RSDHistoryPathComponent)?.dataManager
