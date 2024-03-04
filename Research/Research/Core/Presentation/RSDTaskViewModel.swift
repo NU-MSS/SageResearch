@@ -79,9 +79,14 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
         self.task = task
 		let taskResult = task.instantiateTaskResult()
         super.init(taskResult: taskResult)
+		checkParticipantID()
         commonInit(identifier: task.identifier, parentPath: parentPath)
         setupDataTracking()
     }
+	
+	open func checkParticipantID(){
+		
+	}
 	
     /// Initialize the task path with a task.
     /// - parameters:
@@ -93,13 +98,6 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
 		let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
 		super.init(taskResult: taskResult)
 		commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
-	}
-	
-	public init(taskInfo : RSDTaskInfo) {
-		self.identifier = taskInfo.identifier
-		self.taskInfo = taskInfo
-		let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
-		super.init(taskResult: taskResult)
 	}
 	
 	public init(task: RSDTask, taskResult: RSDTaskResult){
