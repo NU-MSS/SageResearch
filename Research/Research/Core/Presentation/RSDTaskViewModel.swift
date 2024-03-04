@@ -87,13 +87,20 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     /// - parameters:
     ///     - taskInfo: The task info to set for this path segment.
     ///     - parentPath: A pointer to the parent task path.
-    public init(taskInfo : RSDTaskInfo, parentPath: RSDPathComponent? = nil) {
-        self.identifier = taskInfo.identifier
-        self.taskInfo = taskInfo
-        let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
+	public init(taskInfo : RSDTaskInfo, parentPath: RSDPathComponent? = nil) {
+		self.identifier = taskInfo.identifier
+		self.taskInfo = taskInfo
+		let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
 		super.init(taskResult: taskResult)
 		commonInit(identifier: taskInfo.identifier, parentPath: parentPath)
-    }
+	}
+	
+	public init(taskInfo : RSDTaskInfo) {
+		self.identifier = taskInfo.identifier
+		self.taskInfo = taskInfo
+		let taskResult = RSDTaskResultObject(identifier: taskInfo.identifier)  // Create a temporary result
+		super.init(taskResult: taskResult)
+	}
 	
 	public init(task: RSDTask, taskResult: RSDTaskResult){
 		self.identifier = task.identifier
