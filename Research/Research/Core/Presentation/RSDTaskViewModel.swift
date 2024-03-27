@@ -764,7 +764,7 @@ extension RSDTaskViewModel {
                 return
         }
         
-        taskController.show(stepController, from: previousStep, direction: direction) { [weak self] (finished) in
+		taskController.show(stepController, from: previousStep, direction: direction, animated: false) { [weak self] _ in
             self?._finishMoving(to: step, from: previousStep, direction: direction)
         }
     }

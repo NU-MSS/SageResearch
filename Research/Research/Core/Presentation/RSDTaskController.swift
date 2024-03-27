@@ -91,7 +91,7 @@ public protocol RSDTaskController : AnyObject {
     ///                     last step in a paged section or fetched subtask.
     ///     - direction: The direction in which to show the animation change.
     ///     - completion: The completion to call once the navigation animation has completed.
-    func show(_ stepController: RSDStepController, from previousStep: RSDStep?, direction: RSDStepDirection, completion: ((Bool) -> Void)?)
+	func show(_ stepController: RSDStepController, from previousStep: RSDStep?, direction: RSDStepDirection, animated: Bool?, completion: ((Bool) -> Void)?)
     
     /// Show a loading state while fetching the given task from the task info.
     /// - parameter taskInfo: The task info for the task being fetched.

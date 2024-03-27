@@ -461,10 +461,10 @@ open class RSDTaskViewController: UIViewController, RSDTaskController, UIPageVie
     ///                     last step in a paged section or fetched subtask.
     ///     - direction: The direction in which to show the animation change.
     ///     - completion: The completion to call once the navigation animation has completed.
-    public func show(_ stepController: RSDStepController, from previousStep: RSDStep?, direction: RSDStepDirection, completion: ((Bool) -> Void)?) {
+	public func show(_ stepController: RSDStepController, from previousStep: RSDStep?, direction: RSDStepDirection, animated: Bool? = nil, completion: ((Bool) -> Void)?) {
         let vc = stepController as! UIViewController
         _statusBarVC = vc
-        let animated = UIApplication.shared.applicationState == .active
+        let animated = animated ?? (UIApplication.shared.applicationState == .active)
         pageViewController.setViewControllers([vc], direction: direction, animated: animated) { (finished) in
             self.hideLoadingIfNeeded()
             completion?(finished)
