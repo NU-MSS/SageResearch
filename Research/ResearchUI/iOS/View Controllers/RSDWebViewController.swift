@@ -10,6 +10,7 @@ import Research
 /// `RSDWebViewController` is a simple view controller for showing a webview. The base-class implementation
 /// supports loading a web view from a URL, HTML string, or `RSDResourceTransformer`. It is assumed that
 /// the property will be set for one of these values.
+@available(iOS 13.0, *)
 open class RSDWebViewController: UIViewController, WKNavigationDelegate {
     
     /// The webview attached to this view controller.
@@ -57,6 +58,7 @@ open class RSDWebViewController: UIViewController, WKNavigationDelegate {
     // MARK: View management
     
     /// Override `viewDidLoad()` to instantiate a webview if there wasn't one created using a storyboard or nib.
+    @available(iOS 13.0, *)
     open override func viewDidLoad() {
         super.viewDidLoad()
         if activityIndicator == nil {

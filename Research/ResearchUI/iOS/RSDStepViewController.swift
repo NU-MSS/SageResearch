@@ -15,6 +15,7 @@ import MobilePassiveData
 
 /// `RSDStepViewController` is the default base class implementation for the steps presented using this
 /// UI architecture.
+@available(iOS 13.0, *)
 open class RSDStepViewController : UIViewController, RSDStepController, RSDCancelActionController {
     
     /// The stepViewModel presented by the step view controller.
@@ -81,6 +82,12 @@ open class RSDStepViewController : UIViewController, RSDStepController, RSDCance
             return result
         }
     }()
+
+    /// Property for supplying a callback that will be called during the view controller's `viewDidLoad()`.
+    ///
+    /// This is currently used by UI testing to inject custom view configuration required for testing.
+    /// - parameter viewController: A reference to the view controller whose view was loaded.
+    public var callback_onViewDidLoad: ((_ viewController: RSDStepViewController) -> Void)? = nil
     
     // MARK: Initialization
     
@@ -1166,6 +1173,7 @@ open class RSDStepViewController : UIViewController, RSDStepController, RSDCance
     }
 }
 
+@available(iOS 13.0, *)
 extension RSDStepViewController : ThemeImageViewOwner {
     
     /// For this case, the image theme identifier should not change while the step view is loaded

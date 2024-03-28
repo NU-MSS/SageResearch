@@ -7,6 +7,7 @@ import UIKit
 import Research
 import MobilePassiveData
 
+@available(iOS 13.0, *)
 open class PermissionStepViewModel: RSDStepViewModel {
     
     /// Flag indicating the authorization status for this step.
@@ -20,6 +21,7 @@ open class PermissionStepViewModel: RSDStepViewModel {
 
 /// `PermissionStepViewController` is a customizable view controller that is designed to be used to
 /// request and/or check the permission status for this view.
+@available(iOS 13.0, *)
 open class PermissionStepViewController: RSDStepViewController {
     
     override open func instantiateStepViewModel(for step: RSDStep, with parent: RSDPathComponent?) -> RSDStepViewPathComponent {

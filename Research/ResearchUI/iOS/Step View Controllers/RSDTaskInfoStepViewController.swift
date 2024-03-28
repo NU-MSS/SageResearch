@@ -16,6 +16,7 @@ import Research
 ///
 /// - seealso: `RSDTaskViewController.vendDefaultViewController(for:)`
 ///
+@available(iOS 13.0, *)
 open class RSDTaskInfoStepViewController: RSDStepViewController, UITextViewDelegate {
 
     /// A header for the view controller.

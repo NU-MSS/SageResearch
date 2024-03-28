@@ -17,6 +17,7 @@ import MobilePassiveData
 ///
 /// - seealso: `RSDTaskViewController.vendDefaultViewController(for:)`
 ///
+@available(iOS 13.0, *)
 open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
 
     /// An instruction label that is updated to show the same text that is spoken as a spoken instruction
@@ -114,6 +115,7 @@ open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
     }
 
     /// The start method is overridden to start the countdown dial animation.
+    @available(iOS 13.0, *)
     open override func start() {
         super.start()
         if UIApplication.shared.applicationState == .active {
@@ -135,6 +137,7 @@ open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
     }
 
     /// The pause method is overridden to resume the countdown dial animation.
+    @available(iOS 13.0, *)
     override open func resume() {
         super.resume()
         _startProgressAnimation()
@@ -145,6 +148,7 @@ open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
         self.countdownDial?.progress = 0
     }
     
+    @available(iOS 13.0, *)
     override open func stop() {
         super.stop()
         _nextAnimationTask?.cancel()
@@ -248,6 +252,7 @@ open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
     
     private var _nextAnimationTask: Task<Void, Never>?
     
+    @available(iOS 13.0, *)
     private func _startProgressAnimation(delay seconds: UInt64 = 0) {
         _nextAnimationTask?.cancel()
         _nextAnimationTask = Task {
@@ -260,6 +265,7 @@ open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
         }
     }
     
+    @available(iOS 13.0, *)
     @MainActor private func _asyncStartProgressAnimation() {
         guard let stepDuration = self.activeStep?.duration,
             let clock = self.clock, !clock.isPaused
