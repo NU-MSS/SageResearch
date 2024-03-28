@@ -7,7 +7,6 @@ import XCTest
 @testable import Research
 import JsonModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 class FactoryTests: XCTestCase {
     
     override func setUp() {

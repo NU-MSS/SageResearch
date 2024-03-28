@@ -8,7 +8,6 @@ import XCTest
 import JsonModel
 import ResultModel
 
-@available(*, deprecated, message: "Support for BridgeSDK archive and export is deprecated. Please use BridgeClient and implement `FileArchivable` directly instead of `RSDArchivable`.")
 class DataArchiveTests: XCTestCase {
     
     override func setUp() {
@@ -217,7 +216,6 @@ class DataArchiveTests: XCTestCase {
     }
 }
 
-@available(*, deprecated, message: "Support for BridgeSDK archive and export is deprecated. Please use BridgeClient and implement `FileArchivable` directly instead of `RSDArchivable`.")
 class TestArchiveManager: NSObject, RSDDataArchiveManager {
     
     var dataArchiverFor: [String : TestDataArchive] = [:]
@@ -261,7 +259,6 @@ class TestArchiveManager: NSObject, RSDDataArchiveManager {
     }
 }
 
-@available(*, deprecated, message: "Support for BridgeSDK archive and export is deprecated. Please use BridgeClient and implement `FileArchivable` directly instead of `RSDArchivable`.")
 class TestDataArchive: NSObject, RSDDataArchive {
 
     let identifier: String

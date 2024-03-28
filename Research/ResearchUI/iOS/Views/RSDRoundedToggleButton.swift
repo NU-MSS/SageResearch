@@ -7,7 +7,6 @@ import Foundation
 import UIKit
 import Research
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 open class RSDRoundedToggleButton : UIButton, RSDViewDesignable {
     

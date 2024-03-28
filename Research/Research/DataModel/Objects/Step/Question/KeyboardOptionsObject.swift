@@ -6,7 +6,6 @@
 import Foundation
 import JsonModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct KeyboardOptionsObject : KeyboardOptions, Codable, Equatable {
     private enum CodingKeys : String, CodingKey, CaseIterable {
         case _isSecureTextEntry = "isSecureTextEntry"
@@ -68,7 +67,6 @@ public struct KeyboardOptionsObject : KeyboardOptions, Codable, Equatable {
                                                                    keyboardType: .numbersAndPunctuation)
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension KeyboardOptionsObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases

@@ -88,14 +88,12 @@ public protocol RSDStepViewPathComponent : RSDNodePathComponent {
 public protocol RSDHistoryPathComponent : RSDPathComponent {
     
     /// The data manager should be implemented as a weak reference.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     var dataManager: RSDDataStorageManager? { get set }
     
     /// Get the previous result for the given step.
     func previousResult(for step: RSDStep) -> ResultData?
     
     /// The previous data for this task.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     var previousTaskData: RSDTaskData? { get }
 }
 

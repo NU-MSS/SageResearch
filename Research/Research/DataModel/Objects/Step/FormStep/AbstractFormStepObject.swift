@@ -13,7 +13,6 @@ import ResultModel
 /// add your `ResultNode` implementations to the `resultNodeSerializer`.
 ///
 /// - seealso: `RSDFactory.stepSerializer`, `RSDFactory.resultNodeSerializer`
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class AbstractFormStepObject : RSDUIStepObject {
     open override class func defaultType() -> RSDStepType {
         assertionFailure("This is an abstract class. Must override this property in your subclass.")

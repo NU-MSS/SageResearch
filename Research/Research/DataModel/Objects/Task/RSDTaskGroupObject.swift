@@ -7,7 +7,6 @@ import Foundation
 import JsonModel
 
 /// `RSDTaskGroupObject` is a concrete implementation of the `RSDTaskGroup` protocol.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDTaskGroupObject : RSDTaskGroup, Codable {
     private enum CodingKeys: String, CodingKey, CaseIterable {
         case identifier, title, detail, icon, _tasks = "tasks"
@@ -40,7 +39,6 @@ public struct RSDTaskGroupObject : RSDTaskGroup, Codable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTaskGroupObject : DocumentableObject {
     public static func codingKeys() -> [CodingKey] {
         return CodingKeys.allCases

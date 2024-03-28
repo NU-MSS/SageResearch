@@ -8,7 +8,6 @@ import Research
 #if os(iOS) || os(tvOS)
 import UIKit
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTextAutocapitalizationType {
 
     /// Return the `UITextAutocapitalizationType` that maps to this enum.
@@ -22,7 +21,6 @@ extension RSDTextAutocapitalizationType {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTextAutocorrectionType {
 
     /// Return the `UITextAutocorrectionType` that maps to this enum.
@@ -36,7 +34,6 @@ extension RSDTextAutocorrectionType {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTextSpellCheckingType {
     
     /// Return the `UITextSpellCheckingType` that maps to this enum.
@@ -50,7 +47,6 @@ extension RSDTextSpellCheckingType {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDKeyboardType {
 
     /// Return the `UIKeyboardType` that maps to this enum.

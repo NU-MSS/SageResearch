@@ -255,7 +255,6 @@ open class RSDTaskViewController: UIViewController, RSDTaskController, UIPageVie
             DebugStepViewController(step: step, parent: parent)
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     private func _deprecatedViewController(for step: RSDStep, with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
         if step.stepType == .overview {
             return RSDOverviewStepViewController.initializeStepViewController(step: step, parent: parent)
@@ -810,7 +809,6 @@ open class RSDTaskViewController: UIViewController, RSDTaskController, UIPageVie
         
     /// The current background task may be a subtask for the case where a group of tasks are being
     /// run together as a flow that combines other tasks.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public var activeTask: RSDActiveTask? {
         return (self.task as? RSDActiveTask) ??
             ((self.taskViewModel.currentChild as? RSDTaskPathComponent)?.task as? RSDActiveTask)

@@ -11,14 +11,12 @@ import JsonModel
 /// A csv-formatted file is a smaller format that might be suitable for saving data to a file that will
 /// be parsed into a table, **but** the elements must all conform to single value container encoding
 /// **and** they may not include any strings in the encoded value.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDDelimiterSeparatedEncodable : Encodable {
     
     /// An ordered list of coding keys to use when encoding this object to a comma-separated string.
     static func codingKeys() -> [CodingKey]
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDDelimiterSeparatedEncodable {
     
     /// The comma-separated list of header strings to use as the header in a CSV file.
@@ -32,7 +30,6 @@ extension RSDDelimiterSeparatedEncodable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension Encodable {
     
     /// Returns the comma-separated string representing this object.
@@ -62,7 +59,6 @@ extension Encodable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version. Use the methods provided by `JsonModel` instead.")
 extension Encodable {
     /// Returns JSON-encoded data created by encoding this object using a JSON encoder created
     /// by the shared `RSDFactory` singleton.
@@ -86,7 +82,6 @@ extension Encodable {
 
 /// The wrapper is required b/c `JSONEncoder` does not implement the `Encoder` protocol.
 /// Instead, it uses a private wrapper to box the encoded object.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 fileprivate struct _EncodableWrapper: Encodable {
     let encodable: Encodable
     func encode(to encoder: Encoder) throws {

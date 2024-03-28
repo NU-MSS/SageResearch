@@ -10,7 +10,6 @@ import Research
 fileprivate let defaultSize: CGFloat = 122
 
 /// A checkmark view is a simple view that draws a checkmark on a dark background.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public final class RSDCheckmarkView: UIView {
     
     /// The corner radius for the checkmark. Default == -1, which will result in a circle.
@@ -161,7 +160,6 @@ fileprivate let defaultSize: CGFloat = 122
 }
 
 /// A table cell that displays using a checkbox.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public class RSDCheckboxTableCell : RSDTableViewCell {
     
     fileprivate let buttonView: RSDCheckboxButtonView
@@ -221,7 +219,6 @@ fileprivate let defaultSize: CGFloat = 122
 }
 
 /// A table cell that displays using a checkbox.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public class RSDRadioButtonTableCell : RSDCheckboxTableCell {
     
     override public var cornerRadius: CGFloat {
@@ -237,7 +234,6 @@ fileprivate let defaultSize: CGFloat = 122
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public class RSDRadioButton : UIButton, RSDViewDesignable {
     fileprivate let buttonView: RSDCheckboxButtonView
     
@@ -311,7 +307,6 @@ fileprivate let defaultSize: CGFloat = 122
 
 
 /// A button that displays using a checkbox.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public final class RSDCheckboxButton : UIButton {
     
     fileprivate let buttonView: RSDCheckboxButtonView
@@ -375,7 +370,6 @@ fileprivate let defaultSize: CGFloat = 122
 fileprivate let borderWidth: CGFloat = 1
 fileprivate let checkboxHeight: CGFloat = 32
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 fileprivate class RSDCheckboxButtonView : UIView, RSDViewDesignable {
     
     fileprivate var checkboxContainer: UIView!
@@ -517,7 +511,6 @@ fileprivate class RSDCheckboxButtonView : UIView, RSDViewDesignable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 fileprivate class UncheckedView : UIView {
     

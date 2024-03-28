@@ -8,7 +8,6 @@ import JsonModel
 
 /// A cohort rule can be used to mutate a list of cohorts of which the participant is a member. A cohort
 /// is a data group that participants are added to based on the results of survey questions.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class RSDCohortTrackingRule : RSDTrackingRule, Codable {
 
     /// The initial cohorts before the task starts.
@@ -80,7 +79,6 @@ open class RSDCohortTrackingRule : RSDTrackingRule, Codable {
 }
 
 /// Concrete implementation of the `RSDCohortNavigationRule`.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDCohortNavigationRuleObject : RSDCohortNavigationRule, Codable {
     
     /// The list of cohorts that are tested for this navigation rule.
@@ -111,11 +109,9 @@ public struct RSDCohortNavigationRuleObject : RSDCohortNavigationRule, Codable {
 
 // Documentable implementations
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDCohortRuleOperator : DocumentableStringEnum, StringEnumSet {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDCohortNavigationRuleObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         return CodingKeys.allCases

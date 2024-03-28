@@ -168,7 +168,6 @@ public struct RSDSectionStepObject: RSDSectionStep, RSDConditionalStepNavigator,
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDSectionStepObject : DocumentableObject {
     public static func codingKeys() -> [CodingKey] {
         return CodingKeys.allCases

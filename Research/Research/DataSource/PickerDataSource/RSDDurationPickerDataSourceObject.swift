@@ -8,7 +8,6 @@ import JsonModel
 
 /// `RSDDurationPickerDataSourceObject` is a concrete implementation of a `RSDMultipleComponentChoiceOptions`
 /// that can be used to select a duration using duration units for each component of the duration.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDDurationPickerDataSourceObject : RSDMultipleComponentPickerDataSource {
     
     /// A list of choices for the input field.
@@ -119,7 +118,6 @@ public struct RSDDurationPickerDataSourceObject : RSDMultipleComponentPickerData
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDDurationRange {
     
     /// Convenience method for getting the base unit associated with this range.

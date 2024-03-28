@@ -103,7 +103,6 @@ extension RSDTaskInfoObject : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTaskInfoObject : Equatable {
     public static func ==(lhs: RSDTaskInfoObject, rhs: RSDTaskInfoObject) -> Bool {
         return lhs.identifier == rhs.identifier &&
@@ -117,7 +116,6 @@ extension RSDTaskInfoObject : Equatable {
 
 /// `RSDTaskInfoStepObject` is extended to implement the `RSDTaskGroup` protocol where the only item in the
 /// task group is this object.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTaskInfoObject : RSDTaskGroup {
     
     /// Returns `self` as the only item in the list.

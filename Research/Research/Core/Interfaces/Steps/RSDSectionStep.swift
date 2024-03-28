@@ -19,7 +19,6 @@ public protocol RSDSectionStep: RSDStep, RSDTask, RSDStepNavigator {
 extension RSDSectionStep {
     
     /// Task info is `nil` for a section step.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public var taskInfo: RSDTaskInfoStep? {
         return nil
     }

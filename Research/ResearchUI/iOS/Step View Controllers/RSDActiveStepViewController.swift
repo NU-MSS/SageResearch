@@ -17,7 +17,6 @@ import MobilePassiveData
 ///
 /// - seealso: `RSDTaskViewController.vendDefaultViewController(for:)`
 ///
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
 
     /// An instruction label that is updated to show the same text that is spoken as a spoken instruction

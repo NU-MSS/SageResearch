@@ -348,7 +348,6 @@ open class AbstractTaskObject : RSDUIActionHandlerObject, RSDCopyTask, Decodable
     /// Does this task use stored data and/or include a scoring at this level?
     open fileprivate(set) var usesTrackedData: Bool = false
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     struct TaskData : RSDTaskData {
         let identifier: String
         let timestampDate: Date?
@@ -356,7 +355,6 @@ open class AbstractTaskObject : RSDUIActionHandlerObject, RSDCopyTask, Decodable
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension AbstractTaskObject : RSDTrackingTask {
 
     

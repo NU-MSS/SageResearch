@@ -8,7 +8,6 @@ import JsonModel
 import ResultModel
 import Formatters
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class InputItemSerializer : AbstractPolymorphicSerializer, PolymorphicSerializer {
     public var documentDescription: String? {
         """
@@ -67,17 +66,14 @@ public final class InputItemSerializer : AbstractPolymorphicSerializer, Polymorp
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol SerializableInputItemBuilder : InputItemBuilder, PolymorphicRepresentable, Encodable {
     var inputItemType: InputItemType { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public extension SerializableInputItemBuilder {
     var typeName: String { return inputItemType.rawValue }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct InputItemType : TypeRepresentable, Codable, Hashable {
     public let rawValue: String
     public init(rawValue: String) {
@@ -89,7 +85,6 @@ public struct InputItemType : TypeRepresentable, Codable, Hashable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension InputItemType : ExpressibleByStringLiteral, DocumentableStringLiteral {
     public init(stringLiteral value: String) {
         self.init(rawValue: value)
@@ -132,7 +127,6 @@ extension InputItemType : ExpressibleByStringLiteral, DocumentableStringLiteral 
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class AbstractInputItemObject {
 
     private enum CodingKeys : String, OrderedEnumCodingKey, OpenOrderedCodingKey {
@@ -240,7 +234,6 @@ open class AbstractInputItemObject {
 
 // MARK: TextInputItem
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class DoubleTextInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, DoubleTextInputItem {
     public override class func defaultType() -> InputItemType {
         return .decimal
@@ -290,7 +283,6 @@ public final class DoubleTextInputItemObject : AbstractInputItemObject, Serializ
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension DoubleTextInputItemObject : DocumentableStruct {
     public static func examples() -> [DoubleTextInputItemObject] {
         let exA = DoubleTextInputItemObject()
@@ -302,7 +294,6 @@ extension DoubleTextInputItemObject : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class IntegerTextInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, IntegerTextInputItem {
     public override class func defaultType() -> InputItemType {
         return .integer
@@ -361,7 +352,6 @@ public final class IntegerTextInputItemObject : AbstractInputItemObject, Seriali
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension IntegerTextInputItemObject : DocumentableStruct {
     public static func examples() -> [IntegerTextInputItemObject] {
         let exA = IntegerTextInputItemObject()
@@ -373,7 +363,6 @@ extension IntegerTextInputItemObject : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class YearTextInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, YearTextInputItem {
     public override class func defaultType() -> InputItemType {
         return .year
@@ -423,7 +412,6 @@ public final class YearTextInputItemObject : AbstractInputItemObject, Serializab
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension YearTextInputItemObject : DocumentableStruct {
     public static func examples() -> [YearTextInputItemObject] {
         let exA = YearTextInputItemObject()
@@ -435,7 +423,6 @@ extension YearTextInputItemObject : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class StringTextInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, KeyboardTextInputItem {
     public override class func defaultType() -> InputItemType {
         return .string
@@ -501,7 +488,6 @@ public final class StringTextInputItemObject : AbstractInputItemObject, Serializ
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension StringTextInputItemObject : DocumentableStruct {
     public static func examples() -> [StringTextInputItemObject] {
         let exA = StringTextInputItemObject()
@@ -519,7 +505,6 @@ extension StringTextInputItemObject : DocumentableStruct {
 // Note: syoung 04/10/2020 - These classes are included to support parity with Kotlin where there
 // isn't a class for "Date" that includes both date and time.
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public class DateTimeInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, DateTimeInputItem {
     public override class func defaultType() -> InputItemType {
         return .dateTime
@@ -579,11 +564,9 @@ public class DateTimeInputItemObject : AbstractInputItemObject, SerializableInpu
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension DateTimeInputItemObject : DocumentableObject {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class DateInputItemObject : DateTimeInputItemObject {
     override public class func defaultType() -> InputItemType {
         return .date
@@ -604,7 +587,6 @@ public final class DateInputItemObject : DateTimeInputItemObject {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class TimeInputItemObject : DateTimeInputItemObject {
     override public class func defaultType() -> InputItemType {
         return .time
@@ -627,7 +609,6 @@ public final class TimeInputItemObject : DateTimeInputItemObject {
 
 // MARK: Choice Picker
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class ChoicePickerInputItemObject : AbstractInputItemObject, SerializableInputItemBuilder, ChoicePickerInputItem {
     open override class func defaultType() -> InputItemType {
         return .choicePicker
@@ -726,18 +707,15 @@ open class ChoicePickerInputItemObject : AbstractInputItemObject, SerializableIn
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension ChoicePickerInputItemObject : DocumentableObject {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 internal func defaultBaseType(for jsonChoices: [JsonChoice]) -> JsonType {
     jsonChoices.first(where: {
         $0.matchingValue != nil && $0.matchingValue != JsonElement.null
     })?.matchingValue!.jsonType ?? .string
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class StringChoicePickerInputItemObject : ChoicePickerInputItemObject {
     public override class func defaultType() -> InputItemType {
         .stringChoicePicker
@@ -780,7 +758,6 @@ public final class StringChoicePickerInputItemObject : ChoicePickerInputItemObje
 // MARK: SkipCheckboxInputItem
 
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct SkipCheckboxInputItemObject : SkipCheckboxInputItem, Codable, Hashable {
     private enum CodingKeys : String, CodingKey, CaseIterable {
         case classType = "type", fieldLabel, matchingValue = "value"
@@ -802,7 +779,6 @@ public struct SkipCheckboxInputItemObject : SkipCheckboxInputItem, Codable, Hash
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension SkipCheckboxInputItemObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -834,7 +810,6 @@ extension SkipCheckboxInputItemObject : DocumentableStruct {
 
 // MARK: CheckboxInputItem
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct CheckboxInputItemObject : CheckboxInputItem, SerializableInputItemBuilder, Hashable {
     private enum CodingKeys : String, CodingKey, CaseIterable {
         case inputItemType = "type", fieldLabel, detail, identifier
@@ -856,7 +831,6 @@ public struct CheckboxInputItemObject : CheckboxInputItem, SerializableInputItem
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension CheckboxInputItemObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -886,16 +860,13 @@ extension CheckboxInputItemObject : DocumentableStruct {
 
 // MARK: Height and Weight
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public enum HumanMeasurementRange : String, Codable, CaseIterable {
     case adult, child, infant
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension HumanMeasurementRange : StringEnumSet, DocumentableStringEnum {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public class AbstractMeasurementInputItemObject : AbstractInputItemObject, Codable {
     private enum CodingKeys : String, CodingKey, CaseIterable {
         case measurementRange
@@ -948,7 +919,6 @@ public class AbstractMeasurementInputItemObject : AbstractInputItemObject, Codab
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class HeightInputItemBuilderObject : AbstractMeasurementInputItemObject, SerializableInputItemBuilder {
     public override class func defaultType() -> InputItemType {
         .height
@@ -965,7 +935,6 @@ public final class HeightInputItemBuilderObject : AbstractMeasurementInputItemOb
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension HeightInputItemBuilderObject : DocumentableStruct {
     public static func examples() -> [HeightInputItemBuilderObject] {
         [HeightInputItemBuilderObject()]
@@ -975,7 +944,6 @@ extension HeightInputItemBuilderObject : DocumentableStruct {
 /// Use a wrapper for the height to allow the app to vend a different formatter depending upon
 /// whether or not the participant is using metric and to wrap the input item for use by BridgeSDK
 /// model objects.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct HeightInputItemObject : KeyboardTextInputItem, TextInputValidator {
 
     public let identifier: String?
@@ -1028,12 +996,10 @@ public struct HeightInputItemObject : KeyboardTextInputItem, TextInputValidator 
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension HeightInputItemObject : MeasurementTextInputValidator {
     var measurementFormatter: MeasurementFormatter { lengthFormatter }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class WeightInputItemBuilderObject : AbstractMeasurementInputItemObject, SerializableInputItemBuilder {
     public override class func defaultType() -> InputItemType {
         .weight
@@ -1050,7 +1016,6 @@ public final class WeightInputItemBuilderObject : AbstractMeasurementInputItemOb
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension WeightInputItemBuilderObject : DocumentableStruct {
     public static func examples() -> [WeightInputItemBuilderObject] {
         [WeightInputItemBuilderObject()]
@@ -1060,7 +1025,6 @@ extension WeightInputItemBuilderObject : DocumentableStruct {
 /// Use a wrapper for the height to allow the app to vend a different formatter depending upon
 /// whether or not the participant is using metric and to wrap the input item for use by BridgeSDK
 /// model objects.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct WeightInputItemObject : KeyboardTextInputItem, TextInputValidator {
 
     public let identifier: String?
@@ -1113,7 +1077,6 @@ public struct WeightInputItemObject : KeyboardTextInputItem, TextInputValidator 
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension WeightInputItemObject : MeasurementTextInputValidator {
     var measurementFormatter: MeasurementFormatter { massFormatter }
 }

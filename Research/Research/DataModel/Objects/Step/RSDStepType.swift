@@ -80,7 +80,6 @@ public struct RSDStepType : RSDFactoryTypeRepresentable, Codable, Hashable {
     public static let choiceQuestion = QuestionType.choiceQuestion.type
     public static let stringChoiceQuestion = QuestionType.stringChoiceQuestion.type
     
-    @available(*, deprecated, message: "Replaced with the appropriate `QuestionType`")
     public static let form: RSDStepType = "form"
     
     /// List of all the standard types.

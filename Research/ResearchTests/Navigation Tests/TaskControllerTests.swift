@@ -524,7 +524,6 @@ class TaskControllerTests: XCTestCase {
         XCTAssertEqual(directionThird, .forward)
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testCohortNavigation_SkipFirstStep() {
         let step1 = RSDUIStepObject(identifier: "step1")
         let step2 = RSDUIStepObject(identifier: "step2")
@@ -541,7 +540,6 @@ class TaskControllerTests: XCTestCase {
         RSDFactory.shared.trackingRules = []
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testDataTrackingNavigation_ToCompletion() {
         var steps: [RSDStep] = []
         let beforeSteps: [RSDStep] = TestStep.steps(from: ["introduction", "step1", "step2", "step3"])
@@ -634,7 +632,6 @@ class TaskControllerTests: XCTestCase {
     }
     
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testAbbreviatedInstructions_ToCompletion() {
         
         var steps: [RSDStep] = []
@@ -708,7 +705,6 @@ class TaskControllerTests: XCTestCase {
         RSDStudyConfiguration.shared.fullInstructionsFrequency = .always
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testDataTrackingNavigation_WithSkip_ToCompletion() {
         let steps: [RSDStep] = TestStep.steps(from: ["introduction", "step1", "step2", "step3", "step4", "step5", "completion"])
         let navigator = TestConditionalNavigator(steps: steps)
@@ -726,7 +722,6 @@ class TaskControllerTests: XCTestCase {
     }
     
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testDataTrackingNavigation_WithTrackingSkip_ToCompletion() {
         let steps: [RSDStep] = TestStep.steps(from: ["introduction", "step1", "step2", "step3", "step4", "step5", "completion"])
         let navigator = TestConditionalNavigator(steps: steps)
@@ -760,7 +755,6 @@ class TaskControllerTests: XCTestCase {
     }
     
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testTrackingRules_SkipFirstStep() {
         // Discovered an issue where if the first step in a survey is skipped, that step is still
         // included in the backwards navigation. This test is intended to reproduce that failure
@@ -791,7 +785,6 @@ class TaskControllerTests: XCTestCase {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 class TestTracker : RSDTrackingTask {
     
     var stepsToSkip: [String] = []
@@ -815,7 +808,6 @@ class TestTracker : RSDTrackingTask {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 class TestTrackingRule : RSDTrackingRule {
     
     let skipTo: [String : String]

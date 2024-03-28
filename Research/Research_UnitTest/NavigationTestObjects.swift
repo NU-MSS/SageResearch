@@ -156,7 +156,6 @@ public struct TestTask : RSDTask {
     public var taskResult: RSDTaskResult?
     public var validationError: Error?
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public var tracker: RSDTrackingTask?
     
     public init(identifier: String, stepNavigator: RSDStepNavigator) {
@@ -187,7 +186,6 @@ public struct TestTask : RSDTask {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension TestTask : RSDTrackingTask {
     
     public func taskData(for taskResult: RSDTaskResult) -> RSDTaskData? {
@@ -438,7 +436,6 @@ public class TestTaskController: NSObject, RSDTaskController {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public class TestDataStoreManager : NSObject, RSDDataStorageManager {
     
     public var previous: [RSDIdentifier : RSDTaskData] = [:]
@@ -453,7 +450,6 @@ public class TestDataStoreManager : NSObject, RSDDataStorageManager {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct TestData : RSDTaskData {
     public let identifier: String
     public let timestampDate: Date?

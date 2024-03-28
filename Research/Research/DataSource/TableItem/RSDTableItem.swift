@@ -5,7 +5,6 @@
 
 import Foundation
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDUIStep {
 
     /// Convenience method for building the sections of the table from the input fields.
@@ -27,7 +26,6 @@ extension RSDUIStep {
 }
 
 /// `RSDTableItem` can be used to represent the type of the row to display.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class RSDTableItem {
     
     /// A unique identifier for the table item.
@@ -86,7 +84,6 @@ open class RSDTableItem {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTableItem : Hashable {
     
     public func hash(into hasher: inout Hasher) {
@@ -99,7 +96,6 @@ extension RSDTableItem : Hashable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTableItem : CustomStringConvertible {
     
     public var description: String {
@@ -108,7 +104,6 @@ extension RSDTableItem : CustomStringConvertible {
 }
 
 /// `RSDTextTableItem` is used to represent a item row that has static text.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class RSDTextTableItem : RSDTableItem {
     
     /// The text to display.
@@ -125,7 +120,6 @@ public final class RSDTextTableItem : RSDTableItem {
 }
 
 /// `RSDImageTableItem` is used to represent a item row that has a static image.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class RSDImageTableItem : RSDTableItem {
     
     /// The image to display.

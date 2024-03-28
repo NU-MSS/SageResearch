@@ -6,7 +6,6 @@
 import Foundation
 import JsonModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class RSDInstructionStepObject : RSDUIStepObject, RSDInstructionStep, Encodable {
     private enum CodingKeys : String, OrderedEnumCodingKey, OpenOrderedCodingKey {
         case spokenInstructions

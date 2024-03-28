@@ -6,7 +6,6 @@
 import Foundation
 import JsonModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol InputItemState : AnyObject {
     var identifier: String { get }
     var rowIndex: Int { get }
@@ -16,7 +15,6 @@ public protocol InputItemState : AnyObject {
     var selected: Bool { get set }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class AbstractInputItemTableItem : RSDTableItem {
     public let inputItem: InputItem
     
@@ -28,7 +26,6 @@ open class AbstractInputItemTableItem : RSDTableItem {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class ChoiceInputItemTableItem : AbstractInputItemTableItem, InputItemState, ChoiceInputItemState {
 
     public var selected: Bool
@@ -70,7 +67,6 @@ open class ChoiceInputItemTableItem : AbstractInputItemTableItem, InputItemState
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class TextInputItemTableItem : AbstractInputItemTableItem, InputItemState, TextInputItemState {
     public private(set) var storedAnswer: JsonElement?
     public var selected: Bool

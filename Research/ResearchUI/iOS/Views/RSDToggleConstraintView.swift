@@ -6,7 +6,6 @@
 import Foundation
 import UIKit
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 open class RSDToggleConstraintView : UIView {
     
@@ -73,7 +72,6 @@ open class RSDToggleConstraintView : UIView {
 
 /// A simple button that draws a open/closed chevron that can be used to indicate whether or not
 /// the details are expanded.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 public final class RSDDetailsChevronButton : UIButton {
     
@@ -112,7 +110,6 @@ public final class RSDDetailsChevronButton : UIButton {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 fileprivate class ChevronFlipView : UIView {
     
@@ -172,7 +169,6 @@ fileprivate class ChevronFlipView : UIView {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable
 fileprivate class ChevronView : UIView {
     

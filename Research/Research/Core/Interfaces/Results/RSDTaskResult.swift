@@ -14,14 +14,12 @@ public protocol RSDTaskResult : BranchNodeResult {
 
 /// The `RSDTaskRunResult` is a task result where the task run UUID can be set to allow for nested
 /// results that all use the same run UUID.
-@available(*, deprecated, message: "Implement `AssessmentResult` instead")
 public protocol RSDTaskRunResult : AssessmentResult {
     
     /// Schema info associated with this task.
     var schemaInfo: RSDSchemaInfo? { get set }
 }
 
-@available(*, deprecated, message: "Implement `AssessmentResult` instead")
 extension RSDTaskRunResult {
     public var versionString: String? {
         guard let revision = schemaInfo?.schemaVersion else { return nil }

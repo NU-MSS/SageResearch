@@ -41,7 +41,6 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     }
     
     /// The data manager for accessing previous runs of the task.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public weak var dataManager: RSDDataStorageManager? {
         didSet {
             setupDataTracking()
@@ -492,7 +491,6 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     }
     
     /// The data tracker (if any) for this task.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     open var dataTracker: RSDTrackingTask? {
         return self.task as? RSDTrackingTask
     }
@@ -503,11 +501,9 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     }
     
     /// The previous data queried during task set up from the data manager.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public private(set) var previousTaskData: RSDTaskData?
     
     /// Called when the task is loaded and when the`dataManager` is set.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     open func setupDataTracking() {
         guard let task = self.task,
             let taskData = self.dataManager?.previousTaskData(for: RSDIdentifier(rawValue: task.identifier))
@@ -523,7 +519,6 @@ open class RSDTaskViewModel : RSDTaskState, RSDTaskPathComponent {
     }
     
     /// Called when the task is finished and ready to move to the next subtask.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     open func saveDataTracking() {
         guard let manager = self.dataManager,
             let tracker = self.dataTracker,

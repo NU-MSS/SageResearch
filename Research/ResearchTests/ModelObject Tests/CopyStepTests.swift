@@ -22,7 +22,6 @@ class CopyStepTests: XCTestCase {
     
     // MARK: `copy(with:)`
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testCopy_ActiveUIStepObject() {
         let step = RSDActiveUIStepObject(identifier: "foo", nextStepIdentifier: "bar", type: "boo")
         step.title = "title"
@@ -83,7 +82,6 @@ class CopyStepTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testCopyDefaultDecodable_ActiveUIStepObject() {
         let step = RSDActiveUIStepObject(identifier: "foo", nextStepIdentifier: "bar", type: "boo")
         step.title = "title"
@@ -323,7 +321,6 @@ class CopyStepTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testCopy_TaskInfoObject() {
         var taskInfo = RSDTaskInfoObject(with: "foo")
         taskInfo.title = "title"

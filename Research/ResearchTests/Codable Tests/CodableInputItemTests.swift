@@ -8,7 +8,6 @@ import XCTest
 import JsonModel
 import ResultModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 class CodableInputItemTests: XCTestCase {
 
     override func setUp() {

@@ -8,7 +8,6 @@ import UIKit
 import Research
 
 /// A protocol for setting up a delegate for the button cell.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDButtonCellDelegate : AnyObject {
     
     /// Called by the button cell when it is tapped.
@@ -16,7 +15,6 @@ public protocol RSDButtonCellDelegate : AnyObject {
 }
 
 /// `RSDButtonCell` is used to display a button.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable open class RSDButtonCell : RSDTableViewCell {
     
     /// The callback delegate for the cell.
@@ -41,25 +39,21 @@ public protocol RSDButtonCellDelegate : AnyObject {
 }
 
 /// Constants used by the button cell to set up standard constraints.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDButtonCellLayoutConstants {
     var topMargin: CGFloat { get }
     var bottomMargin: CGFloat { get }
     var sideMargin: CGFloat { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 fileprivate struct DefaultRSDButtonCellLayoutConstants {
     let topMargin = CGFloat(24.0)
     let bottomMargin = CGFloat(24.0)
     let sideMargin = DefaultNavigationFooterLayoutConstants().oneButtonSideMargin
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension DefaultRSDButtonCellLayoutConstants : RSDButtonCellLayoutConstants {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable open class RSDModalButtonCell : RSDButtonCell {
     
     /// Override to set the content view background color to the color of the table background.
