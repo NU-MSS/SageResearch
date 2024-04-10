@@ -8,7 +8,6 @@ import ResultModel
 import Foundation
 
 /// `RSDSurveyRule` defines an evaluation rule and returns a step identifier if appropriate.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDSurveyRule {
     
     /// For a given result (if any), what is the step that the survey should go to next?
@@ -26,7 +25,6 @@ public protocol RSDSurveyRule {
 
 /// `RSDComparableSurveyRule` is a survey rule that matches an expected result to the answer and vends a skip
 /// identifier if the match is evaluated to `true`.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDComparableSurveyRule : RSDSurveyRule, RSDComparable {
     
     /// Optional skip identifier for this rule. If available, this will be used as the skip identifier,
@@ -43,7 +41,6 @@ public protocol RSDComparableSurveyRule : RSDSurveyRule, RSDComparable {
     var ruleOperator: RSDSurveyRuleOperator? { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDComparableSurveyRule {
     
     fileprivate var _ruleOperator: RSDSurveyRuleOperator {

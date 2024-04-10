@@ -8,7 +8,6 @@ import XCTest
 
 @testable import Research
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 class MeasurementDurationTests: XCTestCase {
     
     override func setUp() {

@@ -7,7 +7,6 @@ import Foundation
 import JsonModel
 import ResultModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDScoreBuilder {
     
     /// Build the scoring data from a task result.
@@ -17,7 +16,6 @@ public protocol RSDScoreBuilder {
 }
 
 /// Default implementation for building a task scoring.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDDefaultScoreBuilder : RSDScoreBuilder {
     public init() {
     }
@@ -29,7 +27,6 @@ public struct RSDDefaultScoreBuilder : RSDScoreBuilder {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 internal struct RecursiveScoreBuilder : RSDScoreBuilder {
     
     /// Build the scoring data from a task result by recursively looking for results that conform to either

@@ -7,7 +7,6 @@ import Foundation
 import JsonModel
 import ResultModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class QuestionTableItemGroup : RSDTableItemGroup {
     
     public let question: Question

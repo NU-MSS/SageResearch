@@ -17,7 +17,6 @@ import MobilePassiveData
 ///
 /// - seealso: `RSDTaskViewController.vendDefaultViewController(for:)`
 ///
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @available(iOS 13.0, *)
 open class RSDActiveStepViewController: RSDFullscreenImageStepViewController {
 

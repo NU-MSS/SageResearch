@@ -18,7 +18,6 @@ import JsonModel
 ///            }
 ///            """.data(using: .utf8)! // our data in native (JSON) format
 /// ```
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDWeeklyScheduleObject : Codable, RSDSchedule {
     
     private enum CodingKeys : String, CodingKey, CaseIterable {
@@ -84,7 +83,6 @@ public struct RSDWeeklyScheduleObject : Codable, RSDSchedule {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDWeeklyScheduleObject : Hashable, Comparable {
     
     public func hash(into hasher: inout Hasher) {
@@ -104,7 +102,6 @@ extension RSDWeeklyScheduleObject : Hashable, Comparable {
 }
 
 /// `RSDWeeklyScheduleFormatter` can be used to display formatted text for a weekly schedule item.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public class RSDWeeklyScheduleFormatter : Formatter {
     
     /// The style of the display text for a weekly schedule item.
@@ -223,7 +220,6 @@ public class RSDWeeklyScheduleFormatter : Formatter {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDWeeklyScheduleObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases

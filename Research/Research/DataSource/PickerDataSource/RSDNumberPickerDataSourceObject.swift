@@ -8,7 +8,6 @@ import JsonModel
 import Formatters
 
 /// A simple struct that can be used to implement the `RSDNumberPickerDataSource` protocol.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDNumberPickerDataSourceObject : RSDNumberPickerDataSource {
     
     /// Returns the minimum number allowed.
@@ -32,7 +31,6 @@ public struct RSDNumberPickerDataSourceObject : RSDNumberPickerDataSource {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDNumberPickerDataSource {
     
     /// Returns the decimal number answer for a given selected answer.
@@ -63,15 +61,12 @@ extension RSDNumberPickerDataSource {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension NumberFormatter : RSDNumberFormatterProtocol {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDFractionFormatter : RSDNumberFormatterProtocol {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDDurationFormatter : RSDNumberFormatterProtocol {
 }
 

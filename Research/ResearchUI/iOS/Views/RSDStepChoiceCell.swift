@@ -8,7 +8,6 @@ import Research
 
 
 /// `RSDSelectionTableViewCell` is the base implementation for a selection table view cell.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable open class RSDSelectionTableViewCell: RSDTableViewCell {
     
     @IBOutlet public var titleLabel: UILabel?
@@ -97,7 +96,6 @@ import Research
 
 /// `RSDStepChoiceCell` is a custom implementationn of a selection table cell to use for choice selection
 /// from a list of choices.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable public class RSDStepChoiceCell: RSDSelectionTableViewCell {
     
     override public var tableItem: RSDTableItem! {

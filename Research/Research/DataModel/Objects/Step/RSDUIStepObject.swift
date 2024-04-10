@@ -57,7 +57,7 @@ open class RSDUIStepObject : RSDUIActionHandlerObject, Decodable, RSDCopyStep {
     /// Additional text to display for the step in a localized string.
     open var subtitle: String?
     
-    @available(*, deprecated, message: "This should map to either `detail` or `subtitle`")
+    /// This property should map to either `detail` or `subtitle`.
     open var text: String?
     
     /// The detailed text to display for the step in a localized string.
@@ -107,11 +107,9 @@ open class RSDUIStepObject : RSDUIActionHandlerObject, Decodable, RSDCopyStep {
     open private(set) var nextStepIdentifier: String?
     
     /// The navigation cohort rules to apply *before* displaying the step.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public var beforeCohortRules: [RSDCohortNavigationRule]?
     
     /// The navigation cohort rules to apply *after* displaying the step.
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public var afterCohortRules: [RSDCohortNavigationRule]?
     
     /// The default step type.
@@ -231,7 +229,6 @@ open class RSDUIStepObject : RSDUIActionHandlerObject, Decodable, RSDCopyStep {
     
     // MARK: Table source
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     open func instantiateDataSource(with parent: RSDPathComponent?, for supportedHints: Set<RSDFormUIHint>) -> RSDTableDataSource? {
         return RSDUIStepTableDataSourceImpl(step: self, parent: parent)
     }
@@ -409,7 +406,6 @@ open class RSDUIStepObject : RSDUIActionHandlerObject, Decodable, RSDCopyStep {
         try encodable.encode(to: nestedEncoder)
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     private func _encode(cohortRules: [RSDCohortNavigationRule]?, to encoder: Encoder, forKey: CodingKeys) throws {
         guard let rules = cohortRules else { return }
         guard let encodableRules = rules as? [RSDCohortNavigationRuleObject] else {
@@ -535,7 +531,6 @@ extension RSDUIStepObject : RSDDecodableReplacement {
 extension RSDUIStepObject : RSDOptionalStep {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDUIStepObject : StandardPermissionsStep, RSDCohortNavigationStep, RSDTableStep {
     
 }

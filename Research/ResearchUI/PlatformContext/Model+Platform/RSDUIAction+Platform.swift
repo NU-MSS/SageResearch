@@ -14,7 +14,6 @@ import Research
 extension RSDUIAction {
     
     /// Convenience property for accessing the button icon.
-    @available(*, deprecated, message: "Use `RSDImageRules.assetImage()` instead.")
     public var buttonIcon: RSDImage? {
         guard let imageName = self.iconName else { return nil }
         #if os(iOS) || os(tvOS)

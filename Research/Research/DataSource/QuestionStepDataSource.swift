@@ -7,7 +7,6 @@ import Foundation
 import JsonModel
 import ResultModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public final class QuestionStepDataSource : RSDStepViewModel, RSDTableDataSource {
 
     public weak var delegate: RSDTableDataSourceDelegate?

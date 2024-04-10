@@ -10,11 +10,9 @@ import Foundation
 /// composite protocol of the methods defined using Swift, which are required but can include Swift objects
 /// and methods that conform to Objective-C protocols which allows for optional implementation of the
 /// included methods.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDDataStorageManager : RSDSwiftDataStorageManager, RSDObjCDataStorageManager {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDSwiftDataStorageManager : NSObjectProtocol {
     
     /// Returns data associated with the previous task run for a given task identifier.
@@ -27,7 +25,6 @@ public protocol RSDSwiftDataStorageManager : NSObjectProtocol {
     func saveTaskData(_ data: RSDTaskData, from taskResult: RSDTaskResult?)
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @objc public protocol RSDObjCDataStorageManager : NSObjectProtocol {
     
     /// Optional. Should survey questions be shown in subsequent runs using the results from a

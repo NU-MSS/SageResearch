@@ -15,7 +15,6 @@ import Foundation
 /// run data, the tracking task does *not* inherit from `RSDTask`.
 ///
 /// - seealso: `RSDTaskObject` for example implementation.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDTrackingTask {
     
     /// Create and return the tracked data task that may be used to inform subsequent runs of this task.

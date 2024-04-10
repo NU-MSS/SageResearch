@@ -8,7 +8,6 @@ import Research
 
 /// The scrolling overview step view controller is a custom subclass of the overview step view controller
 /// that uses a scrollview to allow showing detailed overview instructions.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @available(iOS 13.0, *)
 open class RSDScrollingOverviewStepViewController: RSDOverviewStepViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -290,7 +289,6 @@ open class RSDScrollingOverviewStepViewController: RSDOverviewStepViewController
 }
 
 /// `RSDTitleHeaderCollectionViewHeader` shows a simple title label.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 open class RSDTitleHeaderCollectionViewHeader: RSDCollectionViewCell {
     
     static let kCollectionHeaderTopMargin: CGFloat = 8.0
@@ -350,7 +348,6 @@ open class RSDTitleHeaderCollectionViewHeader: RSDCollectionViewCell {
 }
 
 /// `RSDOverviewCollectionViewCell` shows a vertically stacked image icon and title label.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 @IBDesignable open class RSDOverviewCollectionViewCell: RSDCollectionViewCell {
 
     let kCollectionCellVerticalItemSpacing = CGFloat(6)

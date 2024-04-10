@@ -6,7 +6,6 @@
 import Foundation
 import JsonModel
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDDocumentCreator {
     
     let allStringEnums: [DocumentableStringEnum.Type] = {

@@ -13,7 +13,7 @@ public protocol RSDUIStep: RSDStep, RSDUIActionHandler, ContentNode {
 }
 
 extension RSDUIStep {
-    @available(*, deprecated, message: "This protocol has changed. Use `subtitle` or `detail` instead.")
+	/// - returns `self.subtitle` value
     public var text: String? { self.subtitle }
 }
 
@@ -28,7 +28,6 @@ public protocol RSDOptionalStep : RSDStep {
 }
 
 /// A spoken instruction step allows for voice prompts as a part of the step flow.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDSpokenInstructionStep : RSDUIStep {
     
     /// Localized text that represents an instructional voice prompt. Instructional speech begins when the
@@ -42,14 +41,12 @@ public protocol RSDSpokenInstructionStep : RSDUIStep {
 }
 
 /// An instruction step is a UI step that includes detailed text with instructions.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDInstructionStep : RSDSpokenInstructionStep, RSDOptionalStep {
 }
 
 /// `RSDActiveUIStep` extends the `RSDUIStep` to include a duration and commands. This is used for the case
 /// where an `RSDUIStep` has an action such as "start walking" or "stop walking"; the step may also
 /// implement the `RSDActiveUIStep` protocol to allow for spoken instruction.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDActiveUIStep: RSDSpokenInstructionStep {
     
     /// The duration of time to run the step. If `0`, then this value is ignored.
@@ -71,6 +68,5 @@ public protocol RSDActiveUIStep: RSDSpokenInstructionStep {
 /// A countdown step is a subtype of the `RSDActiveUIStep` that may only be displayed when showing
 /// the full instructions. Typically, this type of step is shown using a label that displays a
 /// countdown to displaying the `RSDActiveUIStep` that follows it.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDCountdownUIStep : RSDActiveUIStep, RSDOptionalStep {
 }

@@ -8,7 +8,6 @@ import Formatters
 
 /// `RSDUSMeasurementPickerDataSource` is a generic protocol for converting US Customary
 /// units (multiple component) to metric units.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDUSMeasurementPickerDataSource : RSDMultipleComponentPickerDataSource {
     associatedtype UnitType : Dimension
     
@@ -20,7 +19,6 @@ public protocol RSDUSMeasurementPickerDataSource : RSDMultipleComponentPickerDat
     var largeUnitBounds: (lower: Int, upper: Int) { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDUSMeasurementPickerDataSource {
     
     /// US measurement pickers do not have a default answer.
@@ -57,7 +55,6 @@ extension RSDUSMeasurementPickerDataSource {
 
 /// `RSDUSHeightPickerDataSourceObject` is a custom height picker for use when the `Locale`
 /// uses US Customary units (not metric system).
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDUSHeightPickerDataSourceObject : RSDUSMeasurementPickerDataSource {
     
     /// The separator is not used with the height picker.
@@ -100,7 +97,6 @@ public struct RSDUSHeightPickerDataSourceObject : RSDUSMeasurementPickerDataSour
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDLengthFormatter {
     
     /// Convenience initializer for initializing a length formatter for the appropriate
@@ -129,7 +125,6 @@ extension RSDLengthFormatter {
 
 /// `RSDUSInfantMassPickerDataSource` is a custom weight picker for use when the `Locale`
 /// uses US Customary units (not metric system) and the mass is for an infant in "lb, oz".
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDUSInfantMassPickerDataSourceObject : RSDUSMeasurementPickerDataSource {
     
     /// The separator is not used with the mass picker.
@@ -172,7 +167,6 @@ public struct RSDUSInfantMassPickerDataSourceObject : RSDUSMeasurementPickerData
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDMassFormatter {
     
     /// Convenience initializer for initializing a mass formatter for the appropriate

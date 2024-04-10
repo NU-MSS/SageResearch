@@ -128,7 +128,6 @@ open class Localization: NSObject {
     
     /// The localized name of this App. This method looks at the plist for the main bundle and
     /// returns the most appropriate display name.
-    @available(*, deprecated, message: "Use `currentPlatformContext.localizedAppName` instead.")
     public static let localizedAppName : String = {
         let mainBundle = Bundle.main
         if let bundleInfo = mainBundle.localizedInfoDictionary ?? mainBundle.infoDictionary {

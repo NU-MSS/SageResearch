@@ -8,7 +8,6 @@ import JsonModel
 import ResultModel
 import Formatters
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct PassThruValidator : TextInputValidator {
     public init() {}
     public func answerText(for answer: Any?) -> String? {
@@ -19,7 +18,6 @@ public struct PassThruValidator : TextInputValidator {
     public func validateInput(text: String?) throws -> Any? { text }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RegExValidator : TextInputValidator, Codable {
     private enum CodingKeys : String, CodingKey, CaseIterable {
         case pattern, invalidMessage
@@ -70,7 +68,6 @@ public struct RegExValidator : TextInputValidator, Codable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RegExValidator : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -98,7 +95,6 @@ extension RegExValidator : DocumentableStruct {
 
 
 /// `Codable` string enum for the number formatter.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public enum NumberFormatStyle : String, Codable, CaseIterable {
     case none, decimal, currency, percent, scientific, spellOut, ordinal
     
@@ -112,11 +108,9 @@ public enum NumberFormatStyle : String, Codable, CaseIterable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension NumberFormatStyle : StringEnumSet, DocumentableStringEnum {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol NumberValidator : TextInputValidator {
     associatedtype Value : JsonNumber
     
@@ -136,7 +130,6 @@ public protocol NumberValidator : TextInputValidator {
     func convertToValue(from number: NSNumber) -> Value
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public extension NumberValidator {
     
     var formatter : NumberFormatter {
@@ -200,7 +193,6 @@ public extension NumberValidator {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct IntegerFormatOptions : Codable, NumberValidator {
     public typealias Value = Int
     
@@ -241,7 +233,6 @@ public struct IntegerFormatOptions : Codable, NumberValidator {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension IntegerFormatOptions : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -280,7 +271,6 @@ extension IntegerFormatOptions : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct YearFormatOptions : Codable, NumberValidator {
     public typealias Value = Int
     
@@ -318,7 +308,6 @@ public struct YearFormatOptions : Codable, NumberValidator {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension YearFormatOptions : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -352,14 +341,12 @@ extension YearFormatOptions : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension Date {
     fileprivate var year: Int {
         Calendar.iso8601.component(.year, from: self)
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct DoubleFormatOptions : Codable, NumberValidator {
     public typealias Value = Double
     
@@ -405,7 +392,6 @@ public struct DoubleFormatOptions : Codable, NumberValidator {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension DoubleFormatOptions : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -447,7 +433,6 @@ extension DoubleFormatOptions : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct DateTimeValidator : TextInputValidator {
     let pickerMode: RSDDatePickerMode
     let range: RSDDateRange?
@@ -531,7 +516,6 @@ public struct DateTimeValidator : TextInputValidator {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension Formatter {
     func convertString(from string: String) throws -> Any? {
         var obj: AnyObject?
@@ -546,13 +530,11 @@ extension Formatter {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 protocol MeasurementFormatter {
     func convertString(from string: String) throws -> Any?
     func string(for obj: Any?) -> String?
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension MeasurementFormatter {
     func measurement(from string: String) throws -> NSMeasurement {
         guard let value = try convertString(from: string) as? NSMeasurement else {
@@ -563,21 +545,17 @@ extension MeasurementFormatter {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDLengthFormatter : MeasurementFormatter {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDMassFormatter : MeasurementFormatter {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 protocol MeasurementTextInputValidator : TextInputValidator {
     var answerType: AnswerType { get }
     var measurementFormatter : MeasurementFormatter { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension MeasurementTextInputValidator {
     
     public func answerText(for answer: Any?) -> String? {

@@ -22,7 +22,6 @@ class CodableStepObjectTests: XCTestCase {
     }
     
 
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testInstructionStepObject_Codable() {
         
         let json = """
@@ -176,7 +175,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testUIStepObject_DeviceType_Codable() {
         
         let json = """
@@ -216,7 +214,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testUIStepObjectWithThemes_Codable() {
         
         let json = """
@@ -365,7 +362,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testActiveUIStepObject_Codable() {
         
         let json = """
@@ -411,7 +407,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testActiveUIStepObject_Codable_Defaults() {
         
         let json = """
@@ -438,7 +433,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testOverviewStepObject_Codable() {
         
         let json = """
@@ -544,7 +538,6 @@ class CodableStepObjectTests: XCTestCase {
         }
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     func testResultSummaryStepObject_Codable() {
         
         let json = """

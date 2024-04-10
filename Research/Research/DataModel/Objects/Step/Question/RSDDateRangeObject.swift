@@ -8,7 +8,6 @@ import JsonModel
 
 /// `RSDDateRangeObject` is a concrete implementation of a `RSDDateRange` that defines the range of values appropriate
 /// for a `date` data type.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct RSDDateRangeObject : RSDDateRange, Codable {
     
     private enum CodingKeys : String, CodingKey, CaseIterable {
@@ -190,7 +189,6 @@ public struct RSDDateRangeObject : RSDDateRange, Codable {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDDateRangeObject : DocumentableStruct {
     public static func codingKeys() -> [CodingKey] {
         CodingKeys.allCases
@@ -225,7 +223,6 @@ extension RSDDateRangeObject : DocumentableStruct {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDDateCoder {
     fileprivate var formatType: RSDDatePickerMode {
         let dateComponents : Set<Calendar.Component> = [.year, .month, .day]

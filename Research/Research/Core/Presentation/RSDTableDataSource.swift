@@ -5,13 +5,11 @@
 
 import Foundation
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public enum RSDUIRowAnimation : Int {
     case fade, right, left, top, bottom, none, middle, automatic
 }
 
 /// Delegate for the data source.
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDTableDataSourceDelegate: AnyObject {
     
     /// Called when the answers tracked by the data source change.
@@ -55,7 +53,6 @@ public protocol RSDTableDataSourceDelegate: AnyObject {
 ///     answer options for the `RSDInputField`. The ItemGroup is responsible for storing/computing the
 ///     answers for its `RSDInputField`.
 ///
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol RSDTableDataSource : RSDStepViewPathComponent {
     
     /// The delegate associated with this data source.
@@ -93,7 +90,6 @@ public protocol RSDTableDataSource : RSDStepViewPathComponent {
     func selectAnswer(item: RSDTableItem, at indexPath: IndexPath) throws -> (isSelected: Bool, reloadSection: Bool)
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension RSDTableDataSource {
     
     /// Retrieve the `RSDTableItem` for a specific `IndexPath`.
@@ -127,13 +123,11 @@ extension RSDTableDataSource {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol ItemState : AnyObject {
     var identifier: String { get }
     var indexPath: IndexPath { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol TextInputItemState : ItemState {
     var answerText: String? { get }
     var answer: Any? { get }
@@ -145,7 +139,6 @@ public protocol TextInputItemState : ItemState {
     func answerText(for answer: Any?) -> String?
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol ChoiceInputItemState : ItemState {
     var selected: Bool { get }
     var choice: RSDChoice { get }

@@ -10,7 +10,6 @@ import ResultModel
 // TODO: syoung 04/02/2020 Add documentation for the Kotlin interfaces.
 
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol Question : ResultNode {
     var isOptional: Bool { get }
     var isSingleAnswer: Bool { get }
@@ -19,18 +18,15 @@ public protocol Question : ResultNode {
     func instantiateAnswerResult() -> AnswerResult
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public extension Question {
     func instantiateResult() -> ResultData {
         instantiateAnswerResult()
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol QuestionStep : Question, RSDUIStep {
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public extension QuestionStep {
     func instantiateAnswerResult() -> AnswerResult {
         instantiateStepResult() as? AnswerResult ??
@@ -38,17 +34,14 @@ public extension QuestionStep {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol SkipCheckboxQuestion : Question {
     var skipCheckbox: SkipCheckboxInputItem? { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol SimpleQuestion : SkipCheckboxQuestion {
     var inputItem: InputItemBuilder { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension SimpleQuestion {
     
     public var isSingleAnswer: Bool {
@@ -64,13 +57,11 @@ extension SimpleQuestion {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol MultipleInputQuestion : SkipCheckboxQuestion {
     var inputItems: [InputItemBuilder] { get }
     var sequenceSeparator: String?  { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 extension MultipleInputQuestion {
     
     public var isSingleAnswer: Bool {
@@ -88,14 +79,12 @@ extension MultipleInputQuestion {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public protocol ChoiceQuestion : Question, RSDChoiceOptions {
     var baseType: JsonType { get }
     var inputUIHint: RSDFormUIHint { get }
     var jsonChoices: [JsonChoice] { get }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public extension ChoiceQuestion {
     
     var choices: [RSDChoice] { jsonChoices }
@@ -116,7 +105,6 @@ public extension ChoiceQuestion {
     }
 }
 
-@available(*,deprecated, message: "Will be deleted in a future version.")
 public struct ChoiceItemWrapper : ChoiceInputItem {
     public let choice: JsonChoice
     public let answerType: AnswerType

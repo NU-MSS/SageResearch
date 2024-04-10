@@ -27,9 +27,7 @@ open class RSDFactory : MobilePassiveDataFactory {
     public let taskSerializer = TaskSerializer()
     public let viewThemeSerializer = ViewThemeSerializer()
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public let inputItemSerializer = InputItemSerializer()
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     public let resultNodeSerializer = ResultNodeSerializer()
     
     public required init() {
@@ -67,7 +65,6 @@ open class RSDFactory : MobilePassiveDataFactory {
     }()
     
     /// Optional shared tracking rules
-    @available(*,deprecated, message: "Will be deleted in a future version.")
     open var trackingRules: [RSDTrackingRule] = []
     
     open override func modelName(for className: String) -> String {
@@ -178,7 +175,6 @@ open class RSDFactory : MobilePassiveDataFactory {
     /// - returns: The task info created from this decoder.
     /// - throws: `DecodingError` if the object cannot be decoded.
     /// - seealso: `RSDTaskGroupObject`
-    @available(*, deprecated, message: "Use of a default type is deprecated. Please convert your decode `RSDTaskInfoObject` or the appropriate replacement directly.")
     open func decodeTaskInfo(from decoder: Decoder) throws -> RSDTaskInfo {
         return try RSDTaskInfoObject(from: decoder)
     }
@@ -192,7 +188,6 @@ open class RSDFactory : MobilePassiveDataFactory {
     /// - returns: The schema info created from this decoder.
     /// - throws: `DecodingError` if the object cannot be decoded.
     /// - seealso: `RSDTaskResultObject`
-    @available(*, deprecated, message: "Implement `AssessmentResult` instead")
     open func decodeSchemaInfo(from decoder: Decoder) throws -> RSDSchemaInfo {
         return try RSDSchemaInfoObject(from: decoder)
     }
@@ -204,7 +199,6 @@ open class RSDFactory : MobilePassiveDataFactory {
     /// - parameters:
     ///     - taskResult: The task result being encoded.
     ///     - encoder: The nested encoder to encode the schema info to.
-    @available(*, deprecated, message: "Implement `AssessmentResult` instead")
     open func encodeSchemaInfo(from taskResult: RSDTaskRunResult, to encoder: Encoder) throws {
         if let schema = taskResult.schemaInfo, let encodableSchema = schema as? Encodable {
             try encodableSchema.encode(to: encoder)
@@ -231,12 +225,11 @@ open class RSDFactory : MobilePassiveDataFactory {
     /// Override mapping the array to allow steps to add a pointer between the countdown step and
     /// the active step. This is handled in Kotlin native serialization during unpacking.
     open override func mapDecodedArray<RSDStep>(_ objects: [RSDStep]) throws -> [RSDStep] {
-        _deprecatedSpecialCaseDecoding(objects)
+        specialCaseDecoding(objects)
         return objects
     }
     
-    @available(*,deprecated, message: "Will be deleted in a future version.")
-    private func _deprecatedSpecialCaseDecoding<RSDStep>(_ objects: [RSDStep]) {
+    private func specialCaseDecoding<RSDStep>(_ objects: [RSDStep]) {
         objects.enumerated().forEach { (index, step) in
             if let countdown = step as? RSDCountdownUIStepObject,
                 index + 1 < objects.count,
