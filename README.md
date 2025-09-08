@@ -119,8 +119,18 @@ ResearchLocation contains the logic for recording CoreLocation GPS data to a fil
 These files are separated out into their own framework so that applications that use Research and ResearchUI are not required to set up capabilities and privacy keys in the info.plist that aren't used by the application.
 
 ## Research_UnitTest
-Research-UnitTest is a utility framework designed to allow for unit tests that test navigation and/or localization within a dependent framework that uses the navigation model supported by Research.
+Research-UnitTest is a utility framework designed to allow for unit tests that test navigation and/or localization within a dependent framework that uses the navigation model supported by Research.  The tests are organized into several groups, each targeting specific components and features:
+
+- **Codable Tests**: Cover serialization and deserialization of input items, questions, results, steps, tasks, tracked data, UI actions, and more. Example files: `CodableInputItemTests.swift`, `CodableQuestionTests.swift` etc.
+- **DataSource Tests**: Focus on data source logic for formatters, pickers, and question tables, as well as unit conversion. 
+- **ModelObject Tests**: Test the behavior of model objects such as steps, tasks, frequency, measurement durations, results, schedules, and view models. Example files: `CopyStepTests.swift`, .
+- **Navigation Tests**: Validate navigation logic, including step controllers, survey rules, task controllers, and view models. 
+- **Utility Tests**: Test utility extensions and codable helpers. 
+
+
+- **UI Tests**: The `ResearchUITests` target includes platform context tests for UI components.
+
+These tests can be run using Xcode's built-in test navigator or via command line tools. They help maintain code quality and support ongoing development and refactoring.
 
 ## License
-
 SageResearch is available under the [Commons Clause and BSD 3-clause](LICENSE) licenses.
