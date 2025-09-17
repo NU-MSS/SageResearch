@@ -1,4 +1,5 @@
 # SageResearch
+Update: This project no longer maintained by Sage Bionetworks.
 
 [Sage Bionetworks](http://sagebionetworks.org) has spent four years developing mobile health study apps and played a role in supporting over 20 projects, using Research Kit as the basis for all of our iPhone development. Based on that experience, we have begun to generate a next-generation framework and are looking for the involvement of the broader Research Kit community to provide input on design goals and approaches, and contribute to development. This framework:
 
