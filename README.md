@@ -129,7 +129,7 @@ Research-UnitTest is a utility framework designed to allow for unit tests that t
 - **Utility Tests**: Test utility extensions and codable helpers. 
 
 
-- **UI Tests**: The `ResearchUITests` target includes platform context tests for UI components.
+- The **ResearchUITests** target defined in the package manifest contains unit tests for the ResearchUI framework.
 
 These tests can be run using Xcode's built-in test navigator or via command line tools. They help maintain code quality and support ongoing development and refactoring.
 
